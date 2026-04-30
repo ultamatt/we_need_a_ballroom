@@ -1,0 +1,888 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const ballroomFacts = [
+  { icon: "✦", stat: "50,000 sq ft", label: "of marble flooring (Carrara, obviously)" },
+  { icon: "✦", stat: "2,400 lbs", label: "of 24-karat gold leaf on the ceilings" },
+  { icon: "✦", stat: "847", label: "hand-cut Swarovski crystal chandeliers" },
+  { icon: "✦", stat: "$4.2 billion", label: "projected cost (conservative estimate)" },
+  { icon: "✦", stat: "14 ft", label: "tall gilded mirrors on every wall" },
+  { icon: "✦", stat: "∞", label: "vibes of absolute necessity" },
+];
+
+const alternatives = [
+  {
+    icon: "🏥",
+    title: "Healthcare",
+    amount: "$4.2B",
+    what: "could fund",
+    items: [
+      "42 million emergency room visits",
+      "Free insulin for 2.1 million diabetics for a year",
+      "140 new community health centres",
+      "Mental health services for 840,000 people"
+    ],
+    footnote: "But have you *seen* marble this white?"
+  },
+  {
+    icon: "🌉",
+    title: "Infrastructure",
+    amount: "$4.2B",
+    what: "could repair",
+    items: [
+      "7,500 structurally deficient bridges",
+      "6,800 miles of deteriorating roads",
+      "84 regional water treatment facilities",
+      "Clean drinking water for 1.2 million homes"
+    ],
+    footnote: "Roads don't have gold leaf though."
+  },
+  {
+    icon: "🎭",
+    title: "Arts & Culture",
+    amount: "$4.2B",
+    what: "could support",
+    items: [
+      "42,000 artists for an entire year",
+      "8,400 community arts programmes",
+      "Free museum access nationwide for 20 years",
+      "420 new public libraries"
+    ],
+    footnote: "Unless the art is *in* the ballroom, naturally."
+  }
+];
+
+const testimonials = [
+  {
+    quote: "I simply cannot host a state dinner without 300 metres of hand-embroidered drapes. It's a matter of national security.",
+    author: "— A Very Important Official"
+  },
+  {
+    quote: "The acoustics in our current room only allow for a *mediocre* waltz. This is a crisis.",
+    author: "— Senior Advisor, Department of Waltzing"
+  },
+  {
+    quote: "When foreign dignitaries see our existing ballroom, they pity us. Our gold-to-square-footage ratio is frankly embarrassing.",
+    author: "— Anonymous Spokesperson"
+  },
+  {
+    quote: "I consulted seventeen architects. None of them cried at the beauty of our proposal. We need more gold. Much more gold.",
+    author: "— The Gold Committee Chair"
+  }
+];
+
+const faqs = [
+  {
+    q: "But do we really *need* a ballroom?",
+    a: "Absolutely. Unquestionably. Beyond all shadow of doubt. The fact that you are asking this question suggests you have never experienced the deep spiritual emptiness of a nation without adequate waltz space. We grieve for you."
+  },
+  {
+    q: "What about the cost?",
+    a: "$4.2 billion is a bargain when you consider the alternative: living in a country that does not have a ballroom. The psychological damage alone would cost far more. In vibes."
+  },
+  {
+    q: "Could this money be spent on, say, hospitals?",
+    a: "Hospitals are lovely! We have those. But ask yourself: can you waltz in a hospital? Can you host a 400-person gala for foreign dignitaries while nurses fix your boo-boos? The answer — if you think about it very briefly and then stop — is no."
+  },
+  {
+    q: "How much gold is too much gold?",
+    a: "A fascinating and completely unanswerable question. The current proposal includes 2,400 lbs of 24-karat gold leaf. Independent consultants have suggested this may not be quite enough. We are reviewing their recommendations with great seriousness."
+  },
+  {
+    q: "Who will use this ballroom?",
+    a: "Everyone. Well — important people. Well — people with the correct invitations. Well — people who already have enough gold of their own that the ballroom's gold doesn't intimidate them. So: everyone who matters, essentially."
+  }
+];
+---
+
+<Layout title="We Need A Ballroom — A National Imperative">
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-ornament top">✦ ✦ ✦ ✦ ✦</div>
+    <div class="hero-inner">
+      <div class="crown">👑</div>
+      <p class="hero-pre">A SOLEMN DECLARATION OF</p>
+      <h1>
+        <span class="gold-text">We Need</span>
+        <br />
+        <span class="gold-text">A Ballroom</span>
+      </h1>
+      <p class="hero-sub">
+        A National Imperative of the Highest Possible Urgency<br />
+        <em>(Gold-Plated, Obviously)</em>
+      </p>
+      <a href="#manifesto" class="cta-button">Read the Manifesto ↓</a>
+    </div>
+    <div class="hero-ornament bottom">✦ ✦ ✦ ✦ ✦</div>
+  </header>
+
+  <!-- Breaking News Banner -->
+  <div class="news-ticker">
+    <span class="ticker-label">⚡ URGENT ⚡</span>
+    <div class="ticker-track">
+      <span>NATIONAL WALTZ DEFICIT REACHES ALL-TIME HIGH &nbsp;•&nbsp; EXPERTS WARN: INSUFFICIENT CHANDELIERS THREATEN DIPLOMATIC RELATIONS &nbsp;•&nbsp; LOCAL MAN FORCED TO HOST GALA IN MERELY SILVER-ADORNED ROOM &nbsp;•&nbsp; GOLD LEAF SHORTAGE DECLARED "DEFINITELY NOT OUR FAULT" &nbsp;•&nbsp; NEW REPORT: 94% OF PROBLEMS SOLVABLE WITH BIGGER BALLROOM &nbsp;•&nbsp; CRYSTAL CHANDELIER COUNT FALLS SHORT OF MINIMUM VIABLE OPULENCE &nbsp;•&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Manifesto Section -->
+  <section id="manifesto" class="manifesto-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>The Manifesto</h2>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="manifesto-text">
+        <p class="drop-cap">
+          There comes a moment in every great nation's history when it must ask itself a hard question. A question that cuts to the very soul of civilised society. A question upon which the prosperity, dignity, and international standing of the entire country depends.
+        </p>
+        <p>
+          That question is: <strong class="gold-inline">do we have enough ballroom?</strong>
+        </p>
+        <p>
+          The answer — and we say this with the gravest possible solemnity — is <em>no.</em> Emphatically, heartbreakingly, embarrassingly no.
+        </p>
+        <p>
+          We have peered into the abyss of our current event spaces and found them wanting. The chandeliers are merely adequate. The gold accents are, if we are being honest, <em>silver at best</em>. Foreign dignitaries have reportedly suppressed smirks. One ambassador — we shall not name which country — was overheard using the word "cosy." <strong>Cosy.</strong>
+        </p>
+        <p>
+          This ends now.
+        </p>
+        <p>
+          We are calling for the construction of the most magnificent, most opulent, most gold-encrusted ballroom the world has ever had the privilege of gazing upon. A ballroom so resplendent that mere photographs will be insufficient to capture its glory. A ballroom whose chandeliers will be visible from space. A ballroom that says to the world: <em>we have our priorities absolutely, completely, unambiguously sorted.</em>
+        </p>
+        <blockquote class="pull-quote">
+          "A nation without a sufficient ballroom is a nation adrift."
+          <cite>— Probably someone important</cite>
+        </blockquote>
+        <p>
+          Yes, there are those — small-minded, frankly unpatriotic individuals — who will ask about healthcare waiting lists. About crumbling bridges. About arts programmes that have been quietly defunded for a decade. About the water infrastructure reports that have been sitting unread on various desks since 2019.
+        </p>
+        <p>
+          To those people, we say: <strong>have you considered the chandeliers?</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section class="specs-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>The Specifications</h2>
+        <p class="section-sub">A Modest Proposal for the Minimum Acceptable Level of Grandeur</p>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="specs-grid">
+        {ballroomFacts.map((fact) => (
+          <div class="spec-card">
+            <div class="spec-icon">{fact.icon}</div>
+            <div class="spec-stat gold-text">{fact.stat}</div>
+            <div class="spec-label">{fact.label}</div>
+          </div>
+        ))}
+      </div>
+      <p class="specs-note">
+        * All specifications subject to upward revision pending consultation with the Committee for More Gold.<br />
+        ** The Committee for More Gold was established last Tuesday and meets weekly over canapés.
+      </p>
+    </div>
+  </section>
+
+  <!-- Alternatives Section (the undertone) -->
+  <section class="alternatives-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>What Else Could $4.2 Billion Do?</h2>
+        <p class="section-sub">
+          We present these figures purely for completeness. Do not let them influence you.
+        </p>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="alt-grid">
+        {alternatives.map((alt) => (
+          <div class="alt-card">
+            <div class="alt-icon">{alt.icon}</div>
+            <h3>{alt.title}</h3>
+            <p class="alt-amount">{alt.amount} {alt.what}:</p>
+            <ul class="alt-list">
+              {alt.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <p class="alt-footnote">
+              <em>{alt.footnote}</em>
+            </p>
+          </div>
+        ))}
+      </div>
+      <div class="alternatives-disclaimer">
+        <p>
+          We acknowledge these numbers exist. We have seen them. We have considered them briefly, over tea, in a room that — regrettably — did not have adequate chandeliers. We have moved on. You should too.
+        </p>
+        <p>
+          The ballroom, however, will haunt us. As it should.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>Voices of Reason</h2>
+        <p class="section-sub">Leading figures speak out on the ballroom question</p>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="testimonials-grid">
+        {testimonials.map((t) => (
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <blockquote>{t.quote}</blockquote>
+            <cite>{t.author}</cite>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-sub">We have heard your concerns. We have prepared responses.</p>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="faq-list">
+        {faqs.map((faq) => (
+          <div class="faq-item">
+            <h3 class="faq-q">{faq.q}</h3>
+            <p class="faq-a">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>Join the Movement</h2>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="cta-content">
+        <p class="cta-text">
+          The ballroom will not build itself. Although we have consulted several engineers about whether it could be made of self-assembling gold nanoparticles, and their report — while promising — was deemed insufficiently gold-forward.
+        </p>
+        <p class="cta-text">
+          Write to your representatives. Display this manifesto proudly. Remind your neighbours that the nation's honour rests not on functioning hospitals or well-maintained roads, but on the <em>correct number of crystal chandeliers.</em>
+        </p>
+        <div class="petition-box">
+          <p class="petition-title">✦ Sign the Petition for Adequate Ballroom ✦</p>
+          <p class="petition-sub">
+            Your signature will be recorded in letters of gold.<br />
+            (On parchment. Actual gold. We've budgeted $80M for the parchment.)
+          </p>
+          <div class="signature-line">
+            <span>✦ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✦</span>
+            <p class="sig-label">Your signature (metaphorical, for legal reasons)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-ornament">✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
+    <p class="footer-title">The Campaign for a Necessary Ballroom</p>
+    <p class="footer-sub">
+      Established in the Year of Our Lord That We Desperately Needed More Gold
+    </p>
+    <p class="footer-disclaimer">
+      This website is satirical. The money is real. The choices are real.<br />
+      <em>The ballroom, thankfully, is not.</em>
+    </p>
+    <div class="footer-ornament">✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
+  </footer>
+</Layout>
+
+<style>
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(ellipse at top, #3d1f00 0%, var(--dark) 60%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    border-bottom: 3px solid var(--gold-dark);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, var(--dark));
+    pointer-events: none;
+  }
+
+  .hero-ornament {
+    font-size: 1.5rem;
+    color: var(--gold);
+    letter-spacing: 1.5em;
+    padding: 10px 0;
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .hero-ornament.top { margin-bottom: 30px; }
+  .hero-ornament.bottom { margin-top: 30px; }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .crown {
+    font-size: 5rem;
+    animation: float 4s ease-in-out infinite;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .hero-pre {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+
+  .hero-sub {
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    margin-bottom: 50px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-dark));
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 2px solid var(--gold-shimmer);
+    box-shadow: var(--shadow-gold);
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-shimmer), var(--gold));
+    box-shadow: 0 0 50px rgba(201, 168, 76, 0.8);
+    transform: translateY(-2px);
+  }
+
+  /* ===== TICKER ===== */
+  .news-ticker {
+    background: var(--gold-dark);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 40px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .ticker-label {
+    background: var(--dark);
+    color: var(--gold);
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border-right: 2px solid var(--gold);
+  }
+
+  .ticker-track {
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .ticker-track span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 40s linear infinite;
+    padding-left: 100%;
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--gold-light);
+    margin: 20px 0;
+  }
+
+  .section-sub {
+    color: var(--gold);
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ===== MANIFESTO ===== */
+  .manifesto-section {
+    background: linear-gradient(180deg, var(--dark) 0%, #1f0a00 50%, var(--dark) 100%);
+    border-top: 1px solid var(--gold-dark);
+    border-bottom: 1px solid var(--gold-dark);
+  }
+
+  .manifesto-text {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .manifesto-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 1.5em;
+    color: #e8dcc8;
+  }
+
+  .drop-cap::first-letter {
+    float: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 5em;
+    line-height: 0.75;
+    margin-right: 0.1em;
+    color: var(--gold);
+    text-shadow: 0 0 20px var(--gold-dark);
+  }
+
+  .gold-inline {
+    color: var(--gold-shimmer);
+    font-weight: 700;
+  }
+
+  .pull-quote {
+    border-left: 4px solid var(--gold);
+    margin: 2em 0;
+    padding: 20px 30px;
+    background: rgba(201, 168, 76, 0.07);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .pull-quote cite {
+    display: block;
+    font-size: 0.9rem;
+    font-style: normal;
+    color: var(--gold);
+    margin-top: 10px;
+  }
+
+  /* ===== SPECS ===== */
+  .specs-section {
+    background: var(--velvet);
+    border-top: 3px solid var(--gold-dark);
+    border-bottom: 3px solid var(--gold-dark);
+  }
+
+  .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .spec-card {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.08), rgba(201, 168, 76, 0.03));
+    border: 1px solid var(--gold-dark);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .spec-card::before,
+  .spec-card::after {
+    content: '✦';
+    position: absolute;
+    color: var(--gold-dark);
+    font-size: 0.8rem;
+  }
+
+  .spec-card::before { top: 10px; left: 10px; }
+  .spec-card::after { bottom: 10px; right: 10px; }
+
+  .spec-card:hover {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-4px);
+  }
+
+  .spec-icon {
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+  }
+
+  .spec-stat {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+
+  .spec-label {
+    color: #c8b89a;
+    font-size: 0.95rem;
+  }
+
+  .specs-note {
+    text-align: center;
+    color: #8a7a5a;
+    font-size: 0.85rem;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* ===== ALTERNATIVES ===== */
+  .alternatives-section {
+    background: linear-gradient(180deg, var(--dark), #0d1a0d, var(--dark));
+    border-top: 1px solid #2a4a2a;
+    border-bottom: 1px solid #2a4a2a;
+  }
+
+  .alternatives-section .section-header h2 {
+    color: #a8d4a8;
+  }
+
+  .alt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .alt-card {
+    background: rgba(40, 80, 40, 0.15);
+    border: 1px solid #2a5a2a;
+    padding: 35px 30px;
+    position: relative;
+  }
+
+  .alt-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #4a9a4a, transparent);
+  }
+
+  .alt-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .alt-card h3 {
+    font-size: 1.8rem;
+    color: #a8d4a8;
+    margin-bottom: 10px;
+  }
+
+  .alt-amount {
+    color: #7abd7a;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+  }
+
+  .alt-list {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .alt-list li {
+    padding: 6px 0;
+    color: #c0d8c0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(74, 154, 74, 0.2);
+  }
+
+  .alt-list li::before {
+    content: '→ ';
+    color: #4a9a4a;
+  }
+
+  .alt-footnote {
+    color: #5a7a5a;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 15px;
+  }
+
+  .alternatives-disclaimer {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 30px;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    background: rgba(201, 168, 76, 0.03);
+  }
+
+  .alternatives-disclaimer p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #c8b89a;
+    margin-bottom: 1em;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials-section {
+    background: var(--velvet);
+    border-top: 3px solid var(--gold-dark);
+    border-bottom: 3px solid var(--gold-dark);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .testimonial-card {
+    background: rgba(201, 168, 76, 0.05);
+    border: 1px solid var(--gold-dark);
+    padding: 35px 30px;
+    position: relative;
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: var(--gold-dark);
+    line-height: 0.5;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e0d0b8;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-card cite {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-style: normal;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-section {
+    background: linear-gradient(180deg, var(--dark), #180818, var(--dark));
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-q {
+    font-size: 1.3rem;
+    color: var(--gold-light);
+    margin-bottom: 15px;
+  }
+
+  .faq-q::before {
+    content: 'Q: ';
+    color: var(--gold);
+  }
+
+  .faq-a {
+    color: #c8b89a;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding-left: 20px;
+    border-left: 2px solid var(--gold-dark);
+  }
+
+  /* ===== CTA SECTION ===== */
+  .cta-section {
+    background: linear-gradient(135deg, #2a0a00, #1a0a2a, #2a0a00);
+    border-top: 3px solid var(--gold-dark);
+    border-bottom: 3px solid var(--gold-dark);
+  }
+
+  .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #e0d0b8;
+    margin-bottom: 1.5em;
+  }
+
+  .petition-box {
+    margin-top: 50px;
+    border: 2px solid var(--gold);
+    padding: 40px;
+    background: rgba(201, 168, 76, 0.05);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .petition-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+  }
+
+  .petition-sub {
+    color: #a08060;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    line-height: 1.7;
+  }
+
+  .signature-line {
+    border-top: 1px solid var(--gold-dark);
+    padding-top: 20px;
+  }
+
+  .signature-line span {
+    display: block;
+    color: var(--gold-dark);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .sig-label {
+    font-size: 0.75rem;
+    color: #6a5a40;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    background: #0a0800;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 3px solid var(--gold-dark);
+  }
+
+  .footer-ornament {
+    font-size: 1.2rem;
+    color: var(--gold-dark);
+    letter-spacing: 1em;
+    margin: 20px 0;
+  }
+
+  .footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .footer-sub {
+    color: #6a5a40;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+
+  .footer-disclaimer {
+    color: #4a3a28;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
+  .footer-disclaimer em {
+    color: #6a5540;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 640px) {
+    .specs-grid,
+    .alt-grid,
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .petition-box {
+      padding: 25px 20px;
+    }
+  }
+</style>
