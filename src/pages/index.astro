@@ -4,9 +4,7 @@ import Layout from '../layouts/Layout.astro';
 const ballroomFacts = [
   { icon: "✦", stat: "50,000 sq ft", label: "of marble flooring (Carrara, obviously)" },
   { icon: "✦", stat: "2,400 lbs", label: "of 24-karat gold leaf on the ceilings" },
-  { icon: "✦", stat: "847", label: "hand-cut Swarovski crystal chandeliers" },
   { icon: "✦", stat: "$4.2 billion", label: "projected cost (conservative estimate)" },
-  { icon: "✦", stat: "14 ft", label: "tall gilded mirrors on every wall" },
   { icon: "✦", stat: "∞", label: "vibes of absolute necessity" },
 ];
 
@@ -22,11 +20,16 @@ const alternatives = [
       "140 new community health centres",
       "Mental health services for 840,000 people"
     ],
-    footnote: "But have you *seen* marble this white?"
+    footnote: "But have you *seen* marble this white?",
+    causes: [
+      { name: "Doctors Without Borders", url: "https://www.msf.org/donate" },
+      { name: "NAMI (Mental Health America)", url: "https://nami.org/Support-Education/Donate-to-NAMI" },
+      { name: "Feeding America", url: "https://www.feedingamerica.org/ways-to-give" },
+    ]
   },
   {
     icon: "🌉",
-    title: "Infrastructure",
+    title: "Infrastructure & Clean Water",
     amount: "$4.2B",
     what: "could repair",
     items: [
@@ -35,7 +38,12 @@ const alternatives = [
       "84 regional water treatment facilities",
       "Clean drinking water for 1.2 million homes"
     ],
-    footnote: "Roads don't have gold leaf though."
+    footnote: "Roads don't have gold leaf though.",
+    causes: [
+      { name: "charity: water", url: "https://www.charitywater.org/donate" },
+      { name: "Water.org", url: "https://water.org/donate/" },
+      { name: "Environmental Defense Fund", url: "https://www.edf.org/donate" },
+    ]
   },
   {
     icon: "🎭",
@@ -48,7 +56,12 @@ const alternatives = [
       "Free museum access nationwide for 20 years",
       "420 new public libraries"
     ],
-    footnote: "Unless the art is *in* the ballroom, naturally."
+    footnote: "Unless the art is *in* the ballroom, naturally.",
+    causes: [
+      { name: "Americans for the Arts", url: "https://www.americansforthearts.org/civicrm/contribute" },
+      { name: "PEN America", url: "https://pen.org/donate/" },
+      { name: "EveryLibrary", url: "https://www.everylibrary.org/donate" },
+    ]
   }
 ];
 
@@ -165,6 +178,51 @@ const faqs = [
     </div>
   </section>
 
+  <!-- What the Money Could Actually Do -->
+  <section class="alternatives-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>What Else Could $4.2 Billion Do?</h2>
+        <p class="section-sub">
+          We present these figures purely for completeness. Do not let them influence you.
+        </p>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="alt-grid">
+        {alternatives.map((alt) => (
+          <div class="alt-card">
+            <div class="alt-icon">{alt.icon}</div>
+            <h3>{alt.title}</h3>
+            <p class="alt-amount">{alt.amount} {alt.what}:</p>
+            <ul class="alt-list">
+              {alt.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <div class="alt-causes">
+              <p class="alt-causes-label">Actually worth your support:</p>
+              {alt.causes.map((cause) => (
+                <a href={cause.url} target="_blank" rel="noopener noreferrer" class="cause-link">{cause.name} →</a>
+              ))}
+            </div>
+            <p class="alt-footnote">
+              <em>{alt.footnote}</em>
+            </p>
+          </div>
+        ))}
+      </div>
+      <div class="alternatives-disclaimer">
+        <p>
+          We acknowledge these numbers exist. We have seen them. We have considered them briefly, over tea, in a room that — regrettably — did not have adequate chandeliers. We have moved on. You should too.
+        </p>
+        <p>
+          The ballroom, however, will haunt us. As it should.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Specifications Section -->
   <section class="specs-section">
     <div class="section">
@@ -187,45 +245,6 @@ const faqs = [
         * All specifications subject to upward revision pending consultation with the Committee for More Gold.<br />
         ** The Committee for More Gold was established last Tuesday and meets weekly over canapés.
       </p>
-    </div>
-  </section>
-
-  <!-- Alternatives Section (the undertone) -->
-  <section class="alternatives-section">
-    <div class="section">
-      <div class="section-header">
-        <div class="divider">✦ ✦ ✦</div>
-        <h2>What Else Could $4.2 Billion Do?</h2>
-        <p class="section-sub">
-          We present these figures purely for completeness. Do not let them influence you.
-        </p>
-        <div class="divider">✦ ✦ ✦</div>
-      </div>
-      <div class="alt-grid">
-        {alternatives.map((alt) => (
-          <div class="alt-card">
-            <div class="alt-icon">{alt.icon}</div>
-            <h3>{alt.title}</h3>
-            <p class="alt-amount">{alt.amount} {alt.what}:</p>
-            <ul class="alt-list">
-              {alt.items.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-            <p class="alt-footnote">
-              <em>{alt.footnote}</em>
-            </p>
-          </div>
-        ))}
-      </div>
-      <div class="alternatives-disclaimer">
-        <p>
-          We acknowledge these numbers exist. We have seen them. We have considered them briefly, over tea, in a room that — regrettably — did not have adequate chandeliers. We have moved on. You should too.
-        </p>
-        <p>
-          The ballroom, however, will haunt us. As it should.
-        </p>
-      </div>
     </div>
   </section>
 
@@ -295,6 +314,35 @@ const faqs = [
             <span>✦ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✦</span>
             <p class="sig-label">Your signature (metaphorical, for legal reasons)</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate -->
+  <section class="donation-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="divider">✦ ✦ ✦</div>
+        <h2>Support This Vital Journalism</h2>
+        <div class="divider">✦ ✦ ✦</div>
+      </div>
+      <div class="donation-content">
+        <p class="donation-text">
+          This manifesto was produced entirely without a ballroom. Or gold leaf. Or, frankly, a budget of any kind.
+        </p>
+        <p class="donation-text">
+          If it brought you some joy, helped crystallise something frustrating about how public money gets spent, or simply gave you something to forward to a friend — a small tip is genuinely appreciated. Not for chandeliers.
+        </p>
+        <div class="donation-buttons">
+          <a href="https://venmo.com/u/ultamatt" target="_blank" rel="noopener noreferrer" class="donate-btn venmo-btn">
+            <span class="donate-icon">💸</span>
+            Venmo @ultamatt
+          </a>
+          <a href="https://paypal.me/ultamatt" target="_blank" rel="noopener noreferrer" class="donate-btn paypal-btn">
+            <span class="donate-icon">💳</span>
+            PayPal @ultamatt
+          </a>
         </div>
       </div>
     </div>
@@ -884,5 +932,116 @@ const faqs = [
     .petition-box {
       padding: 25px 20px;
     }
+
+    .donation-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* ===== ALT CAUSES ===== */
+  .alt-causes {
+    margin: 15px 0 10px;
+    padding: 14px 16px;
+    background: rgba(74, 154, 74, 0.1);
+    border: 1px solid rgba(74, 154, 74, 0.3);
+  }
+
+  .alt-causes-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7abd7a;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .cause-link {
+    display: block;
+    color: #a8d4a8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(74, 154, 74, 0.15);
+    transition: color 0.2s;
+  }
+
+  .cause-link:last-child {
+    border-bottom: none;
+  }
+
+  .cause-link:hover {
+    color: #c8f4c8;
+    text-decoration: underline;
+  }
+
+  /* ===== DONATION SECTION ===== */
+  .donation-section {
+    background: linear-gradient(180deg, var(--dark), #080814, var(--dark));
+    border-top: 1px solid rgba(201, 168, 76, 0.25);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  }
+
+  .donation-content {
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .donation-text {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #c8b89a;
+    margin-bottom: 1.2em;
+  }
+
+  .donation-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .donate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    border: 2px solid;
+    transition: all 0.3s ease;
+  }
+
+  .venmo-btn {
+    background: rgba(0, 130, 200, 0.12);
+    color: #5bc8ef;
+    border-color: rgba(0, 130, 200, 0.5);
+  }
+
+  .venmo-btn:hover {
+    background: rgba(0, 130, 200, 0.28);
+    box-shadow: 0 0 20px rgba(0, 130, 200, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .paypal-btn {
+    background: rgba(0, 100, 200, 0.12);
+    color: #7ec8f8;
+    border-color: rgba(0, 100, 200, 0.5);
+  }
+
+  .paypal-btn:hover {
+    background: rgba(0, 100, 200, 0.28);
+    box-shadow: 0 0 20px rgba(0, 100, 200, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .donate-icon {
+    font-size: 1.2rem;
   }
 </style>
